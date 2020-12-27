@@ -1,0 +1,61 @@
+version: "2.0"
+
+stories:
+
+- story: 1.1 greet+search_flights+thanks
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_flights{'source':'dhaka','destination':'sylhet'}
+  - action: action_find_flights
+  - intent: thanks
+  - action: utter_welcome
+
+- story: 1.2 greet+search_trains+thanks
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_trains{'source':'dhaka','destination':'sylhet'}
+  - action: action_find_trains
+  - intent: thanks
+  - action: utter_welcome
+
+- story: 2.1 greet+search_flights+bye
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_flights{'source':'dhaka','destination':'sylhet'}
+  - action: action_find_flights
+  - intent: bye
+  - action: utter_goodbye
+
+- story: 2.2 greet+search_trains+bye
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_trains{'source':'dhaka','destination':'sylhet'}
+  - action: action_find_trains
+  - intent: bye
+  - action: utter_goodbye
+
+- story: 3.1 greet+search_flights+bye
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_flights{'source':'dhaka','destination':'sylhet'}
+  - action: action_find_flights
+  - intent: thanks
+  - action: utter_welcome
+  - intent: bye
+  - action: utter_goodbye
+
+- story: 3.2 greet+search_trains+bye
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_trains{'source':'dhaka','destination':'sylhet'}
+  - action: action_find_trains
+  - intent: thanks
+  - action: utter_welcome
+  - intent: bye
+  - action: utter_goodbye

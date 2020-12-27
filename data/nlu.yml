@@ -1,0 +1,68 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: thanks
+  examples: |
+    - thanks
+    - thank you
+    - thank you so much
+
+- intent: bye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - see you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: search_flights
+  examples: |
+    – find flights from [dhaka](source) to [sylhet](destination)
+    – get me flights from [sylhet](source) to [chittagong](destination)
+    – what are flights from [khulna](source) to [dhaka](destination)
+    – fetch me flights from [sylhet](source) to [khulna](destination)
+    – find flights from [rongpur](source) to [chittagong](destination)
+    – get me flights from [dhaka](source) to [barisal](destination)
+    – what are flights from [barisal](source) to [sylhet](destination)
+    – fetch me flights from [khulna](source) to [barisal](destination)
+
+
+- intent: search_trains
+  examples: |
+    – find trains from [dhaka](source) to [sylhet](destination)
+    – get me trains from [khulna](source) to [dhaka](destination)
+    – what are trains from [sirajgonj](source) to [dhaka](destination)
+    – fetch me trains from [kalkatta](source) to [dhaka](destination)
+    – find trains from [sylhet](source) to [rongpur](destination)
+    – get me trains from [sirajpur](source) to [khulna](destination)
+    – what are trains from [dhaka](source) to [chittagong](destination)
+    – fetch me trains from [khulna](source) to [sylhet](destination)
+
+
+- intent: find_itineraries
+  examples: |
+    – get me my bookings
+    – show me my bookings
+    – find my upcoming trips
+    – fetch my upcoming trips

@@ -1,0 +1,93 @@
+#### This file contains tests to evaluate that your bot behaves as expected.
+#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+
+stories:
+- story: 1.1 greet+search_flights+thanks
+  steps:
+  - user: |
+      hi!
+    intent: greet
+  - action: utter_greet
+  - user: |
+      find flights from dhaka to sylhet
+    intent: search_flights
+  - action: action_find_flights
+  - user: |
+      thank you
+    intent: thanks
+  - action: utter_welcome
+
+- story: 1.1 greet+search_trains+thanks
+  steps:
+  - user: |
+      hi!
+    intent: greet
+  - action: utter_greet
+  - user: |
+      find trains from dhaka to sylhet
+    intent: search_trains
+  - action: action_find_trains
+  - user: |
+      thank you
+    intent: thanks
+  - action: utter_welcome
+
+- story: 2.1 greet+search_flights+bye
+  steps:
+  - user: |
+      hello
+    intent: greet
+  - action: utter_greet
+  - user: |
+      what are flights from khulna to barisal
+    intent: search_flights
+  - action: action_find_flights
+  - user: |
+      bye
+    intent: bye
+  - action: utter_goodbye
+
+- story: 2.2 greet+search_trains+bye
+  steps:
+  - user: |
+      hello
+    intent: greet
+  - action: utter_greet
+  - user: |
+      what are trians from khulna to barisal
+    intent: search_trains
+  - action: action_find_trains
+  - user: |
+      bye
+    intent: bye
+  - action: utter_goodbye
+
+- story: 3.1 greet+search_flights+bye
+  steps:
+  - user: |
+      hello
+    intent: greet
+  - action: utter_greet
+  - user: |
+      get me flights from khulna to barisal
+    intent: search_flights
+  - action: action_find_flights
+  - user: |
+      bye
+    intent: bye
+  - action: utter_goodbye
+
+- story: 3.2 greet+search_trains+bye
+  steps:
+  - user: |
+      hello
+    intent: greet
+  - action: utter_greet
+  - user: |
+      get me trains from khulna to barisal
+    intent: search_trains
+  - action: action_find_trains
+  - user: |
+      bye
+    intent: bye
+  - action: utter_goodbye
